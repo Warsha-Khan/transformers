@@ -98,6 +98,8 @@ class Pix2StructProcessor(ProcessorMixin):
             )
             return text_encoding
 
+        
+        print(text) # changes by WK 
         if not self.image_processor.is_vqa:
             # add pixel_values
             encoding_image_processor = self.image_processor(
