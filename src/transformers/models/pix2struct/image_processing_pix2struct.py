@@ -446,8 +446,8 @@ class Pix2StructImageProcessor(BaseImageProcessor):
             font_bytes = kwargs.pop("font_bytes", None)
             font_path = kwargs.pop("font_path", None)
 
-            if isinstance(header_text, str):
-                header_text = [header_text] * len(images)
+            # if isinstance(header_text, str):
+            #     header_text = [header_text] * len(images)
 
             # images = [
             #     render_header(image, header_text[i], font_bytes=font_bytes, font_path=font_path)
