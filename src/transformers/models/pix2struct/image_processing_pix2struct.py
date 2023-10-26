@@ -449,9 +449,14 @@ class Pix2StructImageProcessor(BaseImageProcessor):
             if isinstance(header_text, str):
                 header_text = [header_text] * len(images)
 
+            # images = [
+            #     render_header(image, header_text[i], font_bytes=font_bytes, font_path=font_path)
+            #     for i, image in enumerate(images)
+            # ]
+            
             images = [
-                render_header(image, header_text[i], font_bytes=font_bytes, font_path=font_path)
-                for i, image in enumerate(images)
+                render_header(images, header_text, font_bytes=font_bytes, font_path=font_path)
+                for i, header_text in enumerate(header_text)
             ]
 
         if do_normalize:
